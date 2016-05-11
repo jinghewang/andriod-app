@@ -1,5 +1,6 @@
 package com.example.hbd.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -39,5 +40,20 @@ public class MainActivity extends AppCompatActivity {
         toast=Toast.makeText(this.getApplicationContext(), str, Toast.LENGTH_SHORT);
         toast.show();
         count++;
+    }
+
+    public void BtnTest1_Click(View view)
+    {
+        Intent intent = new Intent();
+        intent.setClass(MainActivity.this,TestActivity.class);
+        this.startActivity(intent);
+    }
+
+
+    public void BtnTest2_Click(View view)
+    {
+        Intent intent = new Intent();
+        intent.setClass(MainActivity.this,Test2Activity.class);
+        this.startActivity(intent);
     }
 }
