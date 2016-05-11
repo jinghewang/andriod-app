@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
     {
         Intent intent = new Intent();
         intent.setClass(MainActivity.this,TestActivity.class);
+        intent.putExtra("name","wjh");
+        intent.putExtra("age",18);
         this.startActivity(intent);
     }
 
@@ -54,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
     {
         Intent intent = new Intent();
         intent.setClass(MainActivity.this,Test2Activity.class);
+        intent.putExtra("name","wjh2");
+        intent.putExtra("age",20);
         this.startActivity(intent);
     }
 }
