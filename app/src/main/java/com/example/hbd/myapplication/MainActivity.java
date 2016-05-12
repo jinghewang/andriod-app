@@ -25,6 +25,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void BtnLogin_Click(View view)
+    {
+        Intent intent = new Intent();
+        intent.setClass(MainActivity.this,LoginActivity.class);
+        intent.putExtra("name","wjh");
+        intent.putExtra("age",18);
+        this.startActivity(intent);
+    }
+
     public void Btn1_Click(View view)
     {
         String str = "count:" + count;
