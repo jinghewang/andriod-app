@@ -60,4 +60,40 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("age",20);
         this.startActivity(intent);
     }
+
+
+    public void BtnLayout_Click(View view)
+    {
+
+        Button btn = (Button) view;
+        Intent intent = new Intent();
+        intent.putExtra("name",btn.getText());
+        switch (btn.getText().toString().toLowerCase()){
+            case "linear":
+                intent.setClass(MainActivity.this,LinearActivity.class);
+                break;
+
+            case "frame":
+                intent.setClass(MainActivity.this,FrameActivity.class);
+                break;
+
+            case "table":
+                intent.setClass(MainActivity.this,TableActivity.class);
+                break;
+
+            case "relative":
+                intent.setClass(MainActivity.this,RelativeActivity.class);
+                break;
+
+            case "absolute":
+                intent.setClass(MainActivity.this,AbsoluteActivity.class);
+                break;
+
+            default:
+                intent.setClass(MainActivity.this,Test2Activity.class);
+                break;
+        }
+
+        this.startActivity(intent);
+    }
 }
